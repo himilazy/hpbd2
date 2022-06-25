@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>happy birthday</title>
+  <link rel="stylesheet" href="./style.css">
+
+  </head>
+<body>
+  <div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <p>"Chúc Ahi có 1 ngày sinh nhật vui vẻ!</p>
+        <p>Chúc cho ngày càng sinh đẹp hơn, kawwaii hơn và trưởng thành hơn :3</p>
+        <p>Chúc cho mọi điều ước mà em mong muốn đều thành hiện thực</p>
+        <p></p>
+        <p>Enjoy your Day . Stay Blessed nd Happy . Keep Smiling ❤️💕"</p>
+        
+        <h4>from</h4>
+        <p class="signed">Himi vui vẻ</p>
+        
+      </div>
+    </div>
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Happy Birthday!</h1>
+      </div>
+      <button id="open">&gt;</button>
+      <button id="close">&lt;</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+  </script>
+
+<div style="visibility: hidden;">
+<embed src="bday.mp3" autostart="true" loop="true">
+</div>
+<div style="visibility: hidden;">
+<embed src="bday.mp3" autostart="true" loop="true">
+</div>
+
+  </body>
+  </html>
